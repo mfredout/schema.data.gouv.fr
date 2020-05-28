@@ -241,6 +241,19 @@
       <h1 id="intégration-avec-dautres-systèmes">Intégration avec d’autres systèmes</h1>
 <p>En tant que plateforme de référencement de schémas, <code class="highlighter-rouge">schema.data.gouv.fr</code> a vocation à être facilement utilisée par d’autres systèmes informatiques. Nous proposons plusieurs éléments à cet effet.</p>
 
+<ul class="no_toc" id="markdown-toc">
+  <li><a href="#intégration-avec-dautres-systèmes" id="markdown-toc-intégration-avec-dautres-systèmes">Intégration avec d’autres systèmes</a>    <ul>
+      <li><a href="#export-des-schémas-valides" id="markdown-toc-export-des-schémas-valides">Export des schémas valides</a></li>
+      <li><a href="#urls-stables" id="markdown-toc-urls-stables">URLs stables</a>        <ul>
+          <li><a href="#documentation" id="markdown-toc-documentation">Documentation</a></li>
+          <li><a href="#schémas" id="markdown-toc-schémas">Schémas</a></li>
+        </ul>
+      </li>
+      <li><a href="#informations-sur-la-consolidation" id="markdown-toc-informations-sur-la-consolidation">Informations sur la consolidation</a></li>
+    </ul>
+  </li>
+</ul>
+
 <h2 id="export-des-schémas-valides">Export des schémas valides</h2>
 <p>Nous proposons à l’adresse <a href="https://schema.data.gouv.fr/schemas/schemas.zip">https://schema.data.gouv.fr/schemas/schemas.zip</a> une archive compressée au format ZIP comprenant les schémas considérés comme valides par la plateforme ainsi que les fichiers de documentation associés à chaque version des schémas.</p>
 
@@ -338,6 +351,36 @@
 </ul>
 
 <p>Si vous souhaitez un lien vers la dernière version publiée d’un schéma, vous pouvez remplacer <code class="highlighter-rouge">{version}</code> par <code class="highlighter-rouge">latest</code>.</p>
+
+<h2 id="informations-sur-la-consolidation">Informations sur la consolidation</h2>
+
+<p>La consolidation de données par rapport à un schéma consiste à rassembler plusieurs jeux de données conformes à un schéma en un seul jeu de données. schema.data.gouv.fr s’intéresse à ces jeux de données consolidés.</p>
+
+<p>Des informations à ce propos sont disponibles à l’adresse <a href="https://etalab.github.io/monitor-consolidation/report.json">https://etalab.github.io/monitor-consolidation/report.json</a>, au format JSON. Ces informations font état de la conformité la plus récente de jeux de données consolidés.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+   </span><span class="s2">"5448d3e0c751df01f85d0572"</span><span class="p">:{</span><span class="w">
+      </span><span class="s2">"date"</span><span class="p">:</span><span class="s2">"2020-05-25"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"dataset_id"</span><span class="p">:</span><span class="s2">"5448d3e0c751df01f85d0572"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Fichier consolidé des Bornes de Recharge pour Véhicules Électriques"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"schema_slug"</span><span class="p">:</span><span class="s2">"etalab/schema-irve"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"schema_version"</span><span class="p">:</span><span class="s2">"1.0.3"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"file_url"</span><span class="p">:</span><span class="s2">"https://static.data.gouv.fr/resources/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/20200520-224356/bornes-irve-20200520.csv"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"report_url"</span><span class="p">:</span><span class="s2">"https://go.validata.fr/table-schema?input=url&amp;schema_url=https://schema.data.gouv.fr/schemas/etalab/schema-irve/1.0.3/schema.json&amp;url=https://static.data.gouv.fr/resources/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/20200520-224356/bornes-irve-20200520.csv&amp;repair=true"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"nb_rows"</span><span class="p">:</span><span class="mi">12190</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"nb_errors"</span><span class="p">:</span><span class="mi">4365</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"nb_rows_with_errors"</span><span class="p">:</span><span class="mi">4018</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"errors_report"</span><span class="p">:</span><span class="s2">"{</span><span class="se">\"</span><span class="s2">structure-errors</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">count</span><span class="se">\"</span><span class="s2">: 1, </span><span class="se">\"</span><span class="s2">count-by-code</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">extra-header</span><span class="se">\"</span><span class="s2">: 1}}, </span><span class="se">\"</span><span class="s2">value-errors</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">count</span><span class="se">\"</span><span class="s2">: 4364, </span><span class="se">\"</span><span class="s2">rows-count</span><span class="se">\"</span><span class="s2">: 4018, </span><span class="se">\"</span><span class="s2">count-by-code</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">required-constraint</span><span class="se">\"</span><span class="s2">: 4245, </span><span class="se">\"</span><span class="s2">type-or-format-error</span><span class="se">\"</span><span class="s2">: 117, </span><span class="se">\"</span><span class="s2">pattern-constraint</span><span class="se">\"</span><span class="s2">: 2}, </span><span class="se">\"</span><span class="s2">count-by-col-and-code</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">n_enseigne</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">required-constraint</span><span class="se">\"</span><span class="s2">: 403}, </span><span class="se">\"</span><span class="s2">id_station</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">required-constraint</span><span class="se">\"</span><span class="s2">: 446}, </span><span class="se">\"</span><span class="s2">puiss_max</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">type-or-format-error</span><span class="se">\"</span><span class="s2">: 114}, </span><span class="se">\"</span><span class="s2">Ylatitude</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">type-or-format-error</span><span class="se">\"</span><span class="s2">: 1, </span><span class="se">\"</span><span class="s2">required-constraint</span><span class="se">\"</span><span class="s2">: 2}, </span><span class="se">\"</span><span class="s2">nbre_pdc</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">required-constraint</span><span class="se">\"</span><span class="s2">: 1910}, </span><span class="se">\"</span><span class="s2">Xlongitude</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">required-constraint</span><span class="se">\"</span><span class="s2">: 2, </span><span class="se">\"</span><span class="s2">type-or-format-error</span><span class="se">\"</span><span class="s2">: 2}, </span><span class="se">\"</span><span class="s2">code_insee</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">required-constraint</span><span class="se">\"</span><span class="s2">: 917, </span><span class="se">\"</span><span class="s2">pattern-constraint</span><span class="se">\"</span><span class="s2">: 2}, </span><span class="se">\"</span><span class="s2">acces_recharge</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">required-constraint</span><span class="se">\"</span><span class="s2">: 3}, </span><span class="se">\"</span><span class="s2">accessibilit</span><span class="se">\\</span><span class="s2">u00e9</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">required-constraint</span><span class="se">\"</span><span class="s2">: 560}, </span><span class="se">\"</span><span class="s2">n_station</span><span class="se">\"</span><span class="s2">: {</span><span class="se">\"</span><span class="s2">required-constraint</span><span class="se">\"</span><span class="s2">: 2}}}, </span><span class="se">\"</span><span class="s2">count</span><span class="se">\"</span><span class="s2">: 4365}"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"invalid"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"error_percentage"</span><span class="p">:</span><span class="mi">35</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"badge_url"</span><span class="p">:</span><span class="s2">"https://img.shields.io/static/v1?label=Consolidation&amp;message=4365+erreurs&amp;color=red&amp;style=flat-square"</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>La clé de l’objet JSON retourné (<code class="highlighter-rouge">5448d3e0c751df01f85d0572</code> ici) correspond à l’identifiant du jeu de données sur data.gouv.fr.</p>
+
+<p>Pour rappel, des informations sur la consolidation sont disponibles dans le fichier <code class="highlighter-rouge">schemas.yml</code>, dans la clé <code class="highlighter-rouge">consolidation</code>.</p>
 
       
       <p class="edit text-center">
