@@ -236,6 +236,7 @@
       <li><a href="#validations-spécifiques-au-format-table-schema" id="markdown-toc-validations-spécifiques-au-format-table-schema">Validations spécifiques au format Table Schema</a></li>
       <li><a href="#validations-spécifiques-au-format-xml-schema-definition-xsd" id="markdown-toc-validations-spécifiques-au-format-xml-schema-definition-xsd">Validations spécifiques au format XML Schema Definition (XSD)</a></li>
       <li><a href="#validations-spécifiques-au-format-json-schema" id="markdown-toc-validations-spécifiques-au-format-json-schema">Validations spécifiques au format JSON Schema</a></li>
+      <li><a href="#validations-spécifiques-au-format-générique" id="markdown-toc-validations-spécifiques-au-format-générique">Validations spécifiques au format générique</a></li>
     </ul>
   </li>
 </ul>
@@ -351,6 +352,24 @@ goodtables validate <span class="nt">--schema</span> schema.json exemple-valide.
   <span class="pi">-</span>
     <span class="na">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">schemas/bar.json"</span>
     <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Une</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">ce</span><span class="nv"> </span><span class="s">sous-schéma"</span>
+</code></pre></div></div>
+
+<h2 id="validations-spécifiques-au-format-générique">Validations spécifiques au format générique</h2>
+
+<p><strong>Ce type de schéma est considéré comme un mode “dégradé”. Il n’est à utiliser que lorsque le schéma à référencer ne peut possiblement pas être raccroché à un standard déjà supporté par schema.data.gouv.fr ou dont le support pourrait être implémenté</strong>. Seule la documentation sera générée et aucun contrôle ne sera effectué sur la validité du schéma référencé.</p>
+
+<p>Les dépôts contenant des schémas au format générique subissent les validations supplémentaires suivantes :</p>
+
+<ul>
+  <li>le dépôt doit comporter un fichier <code class="highlighter-rouge">schema.yml</code> à la racine du dépôt décrivant le schéma ;</li>
+  <li>ce fichier doit être un Yaml valide.</li>
+</ul>
+
+<p>Le fichier <code class="highlighter-rouge">schema.yml</code> doit avoir le format suivant :</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Mon schéma très générique</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Mon schéma très générique est vraiment très très bien.</span>
+<span class="na">homepage</span><span class="pi">:</span> <span class="s">https://github.com/example/generic-schema</span>
+<span class="na">version</span><span class="pi">:</span> <span class="s">1.0.0</span>
 </code></pre></div></div>
 
       
